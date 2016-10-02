@@ -7,7 +7,7 @@ typedef tpersona tinfo;
 
 tinfo info_get();
 
-void info_show(tinfo *, FILE *, int);
+void info_show(const tinfo *, FILE *, int);
 
 int info_compare(const tinfo *,const tinfo *);
 

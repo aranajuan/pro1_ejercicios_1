@@ -4,7 +4,7 @@ tinfo info_get(){
     return persona_get();
 }
 
-void info_show(tinfo * t, FILE * fp, int bin){
+void info_show(const tinfo * t, FILE * fp, int bin){
     persona_show(t,fp,bin);
 }
 

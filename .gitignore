@@ -1,4 +1,5 @@
 *.layout
+*.depend
 *.txt
 /bin/
 /obj/
