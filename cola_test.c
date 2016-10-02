@@ -1,6 +1,4 @@
-#include<stdio.h>
-#include "persona_adapter.h"
-#include "cola.h"
+#include "cola_test.h"
 
 int run(){
     int i;

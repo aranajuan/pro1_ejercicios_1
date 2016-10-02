@@ -18,7 +18,7 @@ tpersona persona_get(){
 
 void persona_show(const tpersona * p ,FILE * fp, int bin){
     if(!bin)
-        fprintf(fp,"%-20s %.8d %.6d %-3d\n",p->nombre,p->dni,p->legajo,p->edad);
+        fprintf(fp,"%-20.20s %.8d %.6d %-3d\n",p->nombre,p->dni,p->legajo,p->edad);
     else
         fwrite(p,sizeof(tpersona),1,fp);
 }
