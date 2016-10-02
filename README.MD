@@ -1,9 +1,8 @@
-##Para compilar
-###Para probar CODEBLOCKS
+## Para compilar
+### Para probar CODEBLOCKS
 
-´´´
+```
 Project->Properties->[Build targets]
-Marcar archivos para la prueba requerid
-´´´
 
-
+Marcar archivos para la prueba requerida
+```
