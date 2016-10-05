@@ -31,7 +31,7 @@ int run(){
     **/
 
     while(!cola_empty(&cola)){
-        d = cola_get(&cola);
+        cola_get(&cola,&d);
         info_show(&d,pantalla,0);
         //info_show(&d,archivo,1); // guardar en archivo
     }

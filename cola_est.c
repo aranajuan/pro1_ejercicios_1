@@ -27,9 +27,9 @@ int cola_empty(const tcola * c){
     return c->cant == 0;
 }
 
-tinfo cola_get(tcola * c){
+int cola_get(tcola * c, tinfo * inf){
     if(c->cant == 0)
-        return;
+        return 0;
     c->cant--;
 
     tinfo i = c->info[c->fst];
@@ -38,6 +38,6 @@ tinfo cola_get(tcola * c){
     if(c->fst == COLA_SIZE){
         c->fst = 0;
     }
-
-    return i;
+    *inf = i;
+    return 1;
 }

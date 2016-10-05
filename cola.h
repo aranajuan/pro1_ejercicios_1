@@ -21,6 +21,6 @@ int cola_add(tcola *,const tinfo *);
 
 int cola_empty(const tcola *);
 
-tinfo cola_get(tcola *);
+int cola_get(tcola *,tinfo *);
 
 #endif

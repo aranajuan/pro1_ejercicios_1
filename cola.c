@@ -38,15 +38,15 @@ int cola_empty(const tcola * c){
     return c->fst == NULL;
 }
 
-tinfo cola_get(tcola * c){
+int cola_get(tcola * c,tinfo * info){
     if(!c->fst)
-        return;
+        return 0;
 
     tnodo * i = c->fst;
     tinfo d = i->info;
 
     c->fst = c->fst->sig;
     free(i);
-
-    return d;
+    *info = d;
+    return 1;
 }

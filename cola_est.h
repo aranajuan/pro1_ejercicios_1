@@ -3,7 +3,7 @@
 
 #include "persona_adapter.h"
 
-#define COLA_SIZE 10
+#define COLA_SIZE 4
 
 typedef struct{
     tinfo info[COLA_SIZE];
@@ -20,7 +20,7 @@ int cola_add(tcola *,const tinfo *);
 
 int cola_empty(const tcola *);
 
-tinfo cola_get(tcola *);
+int cola_get(tcola *, tinfo *);
 
 
 #endif // COLA_EST_H_INCLUDED
