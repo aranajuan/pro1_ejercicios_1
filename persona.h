@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-#define FLUSH() int c; while((c = getchar()) != '\n' && c != EOF);
+#include "helpers.h"
 
 typedef struct{
 	char nombre[50];

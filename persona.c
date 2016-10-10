@@ -4,7 +4,8 @@ tpersona persona_get(){
 	tpersona p;
 	printf("+Nueva persona:\n");
 	printf("___ Nombre:");
-	gets(p.nombre);
+	fgets(p.nombre,sizeof(p.nombre),stdin);
+	eliminar_caracter(p.nombre,'\n');
 	printf("___ DNI   :");
 	scanf("%d",&p.dni);
 	printf("___ Legajo:");
@@ -24,5 +25,9 @@ void persona_show(const tpersona * p ,FILE * fp, int bin){
 }
 
 int persona_compare(const tpersona * p1,const tpersona * p2){
-    return p1->dni > p2->dni;
+    if( p1->dni == p2->dni)
+        return 0;
+    if(p1->dni > p2->dni)
+        return 1;
+    return -1;
 }
