@@ -3,6 +3,7 @@
 int run(){
     int i;
     tinfo d;
+    char liner[42];
     FILE * pantalla = stdout;
     printf("------Listas------\n");
 
@@ -13,23 +14,24 @@ int run(){
     /**
     * Para cargar de archivo
 **/
-    FILE * archivo_r = fopen("personas_data","rb");
+    FILE * archivo_r = fopen("personas_data_text","r");
 
-    fread(&d,sizeof(tinfo),1,archivo_r);
-    while(!feof(archivo_r)){
+
+    while(fgets(liner,42,archivo_r)){
+        info_load_txt(liner,&d);
         lista_addEnd(&lista, &d);
-        fread(&d,sizeof(tinfo),1,archivo_r);
     }
 
     /**
-    * Para ingresar a manopla
-    FILE * archivo = fopen("personas_data","wb");
+    * Para ingresar a manopla*
+    FILE * archivo = fopen("personas_data_text","w");
 
     for(i = 0 ; i < 3 ; i++){
         d = info_get();
-        cola_add(&cola, &d);
+        lista_addEnd(&lista, &d);
     }
-**/
+*/
+
     lista_sort(&lista,info_compare);
     while(!lista_empty(&lista)){
         lista_pull(&lista,&d);

@@ -11,3 +11,7 @@ void info_show(const tinfo * t, FILE * fp, int bin){
 int info_compare(const tinfo * i1,const tinfo * i2){
     return persona_compare((tpersona *)i1,(tpersona *)i2);
 }
+
+void info_load_txt(const char * c, tinfo * p){
+    persona_load_txt(c, (tpersona * )p);
+}

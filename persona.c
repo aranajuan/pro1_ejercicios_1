@@ -31,3 +31,17 @@ int persona_compare(const tpersona * p1,const tpersona * p2){
         return 1;
     return -1;
 }
+
+void persona_load_txt(const char * s, tpersona * p){
+    char tmp[15];
+    strncpy(p->nombre,s,sizeof(p->nombre));
+    strncpy(tmp,s+21,8);
+    sscanf(tmp,"%d",&p->dni);
+    tmp[8]='\n';
+    strncpy(tmp,s+30,6);
+    tmp[6]='\n';
+    sscanf(tmp,"%d",&p->legajo);
+    strncpy(tmp,s+37,3);
+    tmp[3]='\n';
+    sscanf(tmp,"%d",&p->edad);
+}

@@ -8,7 +8,7 @@
 #include "helpers.h"
 
 typedef struct{
-	char nombre[50];
+	char nombre[21];
 	int dni;
 	int legajo;
 	int edad;
@@ -20,5 +20,7 @@ tpersona persona_get();
 void persona_show(const tpersona *,FILE *, int);
 
 int persona_compare(const tpersona *,const tpersona *);
+
+void persona_load_txt(const char *, tpersona *);
 
 #endif
