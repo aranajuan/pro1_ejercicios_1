@@ -1,5 +1,5 @@
 #include<stdio.h>
-#include "cola_test.h";
+#include "lista_test.h";
 
 int main(){
     printf("------Iniciando------\n");
