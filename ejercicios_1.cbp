@@ -5,7 +5,7 @@
 		<Option title="ejercicios_1" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
-		<Option virtualFolders="colas/;" />
+		<Option virtualFolders="colas/;lista/;" />
 		<Build>
 			<Target title="Debug">
 				<Option output="bin/Debug/ejercicios_1" prefix_auto="1" extension_auto="1" />
@@ -44,19 +44,20 @@
 		<Unit filename="cola_est.c">
 			<Option compilerVar="CC" />
 			<Option virtualFolder="colas/" />
-			<Option target="Debug" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="cola_est.h">
 			<Option virtualFolder="colas/" />
-			<Option target="Debug" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="cola_test.c">
 			<Option compilerVar="CC" />
 			<Option virtualFolder="colas/" />
+			<Option target="Release" />
 		</Unit>
 		<Unit filename="cola_test.h">
 			<Option virtualFolder="colas/" />
-			<Option target="Debug" />
+			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="helpers.c">
 			<Option compilerVar="CC" />
@@ -65,8 +66,23 @@
 		<Unit filename="helpers.h">
 			<Option target="Debug" />
 		</Unit>
+		<Unit filename="lista.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="lista/" />
+			<Option target="Release" />
+		</Unit>
 		<Unit filename="lista.h">
+			<Option virtualFolder="lista/" />
 			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="lista_test.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="lista/" />
+			<Option target="Release" />
+		</Unit>
+		<Unit filename="lista_test.h">
+			<Option virtualFolder="lista/" />
+			<Option target="Release" />
 		</Unit>
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
